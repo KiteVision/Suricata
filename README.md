@@ -41,7 +41,11 @@ Chargeons les règles de détection proposées par défaut, grâce à l’utilit
 sudo suricata-update
 ![image](https://github.com/user-attachments/assets/965b4a50-2dbe-4f8e-8ac5-168450d9e4e3)
 
+ATTENTION : 
+Il est possible que suricata-update crée le fichier de règles "suricata.rules" dans le répertoire /var/lib/suricata/rules,
+si c'est le cas il faut le copier dans /etc/suricat/rules :
 
+cp /var/lib/suricata/rules/suricata.rules /etc/suricata/rules/.
 
 Et nous pouvons alors démarrer l’application, configurée en service avec systemd :
 
